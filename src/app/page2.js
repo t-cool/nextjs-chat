@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
+import ChatForm from './ChatForm'; // ChatForm コンポーネントをインポート
 
 const UserForm = ({ chatInputLabel }) => {
   const [chatInput, setChatInput] = useState('');
@@ -19,19 +20,13 @@ const UserForm = ({ chatInputLabel }) => {
           <li key={index}>{message}</li>
         ))}
       </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="chatInput">{chatInputLabel}:</label>
-          <input
-            type="text"
-            id="chatInput"
-            name="chatInput"
-            value={chatInput}
-            onChange={(e) => setChatInput(e.target.value)}
-          />
-          <button type="submit">送信</button>
-        </div>
-      </form>
+      <br />
+      <ChatForm 
+        chatInputLabel={chatInputLabel} 
+        chatInput={chatInput} 
+        setChatInput={setChatInput} 
+        handleSubmit={handleSubmit} 
+      />
     </>
   );
 };
