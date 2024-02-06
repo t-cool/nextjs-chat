@@ -4,7 +4,7 @@ import UserForm from "./page2";
 export default function Home() {
   return (
     <div>
-      <UserForm usernameLabel="ユーザ名" passwordLabel="パスワード" / >
+      <UserForm chatInputLabel="チャット入力" />
     </div>
   );
 }
