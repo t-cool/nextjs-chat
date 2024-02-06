@@ -105,3 +105,28 @@ a {
     color-scheme: dark;
   }
 }
+
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 80%; /* Set the width to 80% */
+  margin-left: auto; /* Center the wrapper */
+  margin-right: auto; /* Center the wrapper */
+}
+
+.messagesDisplay {
+  flex: 1 0 95%;
+  overflow-y: auto;
+  width: 90%;
+}
+
+.messageInput {
+  flex: 1 0 5%;
+  width: 90%;
+}
+
+.messageInput input {
+  width: 80%; /* Set the input field width to 80% */
+  /* Add any additional styling needed for the input field */
+}

@@ -1,7 +1,7 @@
-import UserForm from "./UserForm";
+import ChatInterface from "./ChatInterface";
 
 export default function Home() {
   return (
-    <UserForm />
+    <ChatInterface />
   );
 }

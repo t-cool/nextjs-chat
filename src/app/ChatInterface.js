@@ -1,10 +1,14 @@
 "use client"
 
 import React, { useState } from 'react';
-import ChatForm from './ChatForm';
+
+// メッセージ表示
 import MessagesDisplay from './MessagesDisplay';
 
-const UserForm = () => {
+// メッセージ入力
+import MessageInput from './MessageInput';
+
+const ChatInterface = () => {
   const [chatInput, setChatInput] = useState('');
   const [messages, setMessages] = useState([]);
 
@@ -15,9 +19,9 @@ const UserForm = () => {
   };
 
   return (
-    <div>
+    <div className="chatWrapper">
       <MessagesDisplay messages={messages} />
-      <ChatForm 
+      <MessageInput 
         chatInput={chatInput} 
         setChatInput={setChatInput} 
         handleSubmit={handleSubmit} 
@@ -26,4 +30,4 @@ const UserForm = () => {
   );
 };
 
-export default UserForm;
+export default ChatInterface;
