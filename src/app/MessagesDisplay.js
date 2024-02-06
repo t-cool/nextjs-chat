@@ -4,11 +4,11 @@ import "./globals.css";
 const MessagesDisplay = ({ messages }) => {
   return (
     <div className='messagesDisplay'>
-        <ul>
-        {messages.map((message, index) => (
-            <li key={index}>{message}</li>
+        {messages.map((message) => (
+            <div className="sample-box-01">
+              {message}
+            </div>
         ))}
-        </ul>
     </div>
   );
 };
