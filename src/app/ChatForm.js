@@ -1,10 +1,9 @@
 import React from 'react';
 
-const ChatForm = ({ chatInputLabel, chatInput, setChatInput, handleSubmit }) => {
+const ChatForm = ({ chatInput, setChatInput, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="chatInput">{chatInputLabel}:</label>
+      <div>        
         <input
           type="text"
           id="chatInput"

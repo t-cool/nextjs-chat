@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from 'react';
-import ChatForm from './ChatForm'; // ChatForm コンポーネントをインポート
+import ChatForm from './ChatForm';
 
-const UserForm = ({ chatInputLabel }) => {
+const UserForm = () => {
   const [chatInput, setChatInput] = useState('');
   const [messages, setMessages] = useState([]);
 
@@ -14,7 +14,7 @@ const UserForm = ({ chatInputLabel }) => {
   };
 
   return (
-    <>
+    <div>
       <ul>
         {messages.map((message, index) => (
           <li key={index}>{message}</li>
@@ -22,12 +22,11 @@ const UserForm = ({ chatInputLabel }) => {
       </ul>
       <br />
       <ChatForm 
-        chatInputLabel={chatInputLabel} 
         chatInput={chatInput} 
         setChatInput={setChatInput} 
         handleSubmit={handleSubmit} 
       />
-    </>
+    </div>
   );
 };
 

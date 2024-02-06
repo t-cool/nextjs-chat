@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
-import UserForm from "./page2";
+import UserForm from "./UserForm";
 
 export default function Home() {
   return (
-    <UserForm chatInputLabel="チャット入力" />
+    <UserForm />
   );
 }
