@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import ChatForm from './ChatForm';
+import MessagesDisplay from './MessagesDisplay';
 
 const UserForm = () => {
   const [chatInput, setChatInput] = useState('');
@@ -15,12 +16,7 @@ const UserForm = () => {
 
   return (
     <div>
-      <ul>
-        {messages.map((message, index) => (
-          <li key={index}>{message}</li>
-        ))}
-      </ul>
-      <br />
+      <MessagesDisplay messages={messages} />
       <ChatForm 
         chatInput={chatInput} 
         setChatInput={setChatInput} 
