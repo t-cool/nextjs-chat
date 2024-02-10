@@ -1,11 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-
-// メッセージ表示
 import MessagesDisplay from './MessagesDisplay';
-
-// メッセージ入力
 import MessageInput from './MessageInput';
 
 const ChatInterface = () => {
